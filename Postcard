@@ -1,0 +1,61 @@
+let centerY
+let speed
+let centerX
+let r
+let g
+let b
+let x
+let y
+let diam
+let count
+
+
+function setup() {
+  createCanvas(400, 400);
+  textAlign(CENTER, CENTER)
+  centerY = 5
+  centerX = 5
+  speed = -1
+  xLocation = 200
+  r = random(0, 256)
+  g = random(0, 256)
+  b = random(0, 256)
+  count = 0
+
+
+}
+
+function draw() {
+  //background(0, 0, 0);
+  console.log("Click")
+
+
+
+
+  if (mouseY > centerY && mouseX > centerX) {
+    fill(r, g, b)
+    ellipse(r, g, 150, 150);
+    xLocation = xLocation + speed
+    speed = speed - .02
+  } else {
+    fill(r, g, b)
+  } {
+    if (mouseIsPressed) {
+      r = random(0, 256)
+      g = random(0, 256)
+      b = random(0, 256)
+      fill(r, g, b)
+      rect(r, g, b, 100)
+    }
+    mouseX = mouseX + speed
+    speed = speed + .02
+  }
+
+  if (count < 20000) {
+    r = random(0, 256)
+    x = random(25, width - 25)
+    y = random(25, width - 25)
+    diam = random(10, 60)
+    fill(r, g, b)
+    circle(x, y, diam)
+    count = count + 1
