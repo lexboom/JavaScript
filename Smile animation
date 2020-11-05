@@ -1,0 +1,56 @@
+//Alexander Clawson
+//Lab 7
+// Smiley faces
+
+
+let s;
+let s2;
+let s3;
+let s4;
+
+function setup() {
+  createCanvas(400, 400);
+  
+  s = new smile( 20, 20);
+  s2 = new smile( 80, 80);
+  s3 = new smile( 140, 140);
+  s4 = new smile( 200, 200);
+}
+
+function draw() {
+  background("purple");
+  
+  s.happyman();
+  s2.happyman();
+  s3.happyman();
+  s4.happyman();
+}
+
+
+class smile
+{
+  constructor(ix, iy)
+  {
+    this.x = ix;
+    this.y = iy;
+  }
+  
+  
+    happyman()
+  {
+    fill("yellow");
+    ellipse(this.x, this.y, 75, 75)
+    fill(0)
+    ellipse(this.x-10, this.y-8, 10, 10) 
+    ellipse(this.x+10, this.y -8, 10, 10)
+    line(this.x+5, this.y+20, this.x+20, this.y+10)
+    line(this.x+5, this.y+20, this.x-5, this.y+20)
+    line(this.x-5, this.y+20, this.x-20, this.y+10)
+    
+   
+    
+    
+  }
+}
+    
+    
