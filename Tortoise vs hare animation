@@ -1,0 +1,45 @@
+//Alexander Clawson
+// tortoise vs hare
+// 10/27/19
+
+
+
+let tlocation
+let rlocation
+let tspeed
+let rspeed
+
+function setup() {
+  createCanvas(400, 400);
+  tlocation=35
+  rlocation=35
+
+  
+}
+
+function draw() {
+  ////background(220);
+
+  
+      rect( tlocation, 300, 45, 45)
+      rect( tlocation, 300, 50, 20)
+      fill(250, 250, 250)
+  
+  if(tlocation < width) 
+  {
+    
+  tspeed = 1
+  tlocation = tlocation + tspeed
+  }
+  
+   rect(rlocation, 320, 45, 45)
+   rect(rlocation, 320, 50, 20)
+  fill(0, 250, 2)
+  
+  if(rlocation < width)
+  
+  {
+   rspeed = 2
+    rlocation = rlocation + rspeed
+}
+  }
